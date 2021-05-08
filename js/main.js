@@ -110,20 +110,20 @@
 
 		var actionUrl = "https://bridge-mail-list-server.herokuapp.com/addEmail";
 
+		$('#subscribe-message').html('Subscribing...');
+
 		$.ajax({
 			url: actionUrl,
 			type: 'post',
 			contentType: 'application/x-www-form-urlencoded',
 			data: $(this).serialize(),
 			success: function (data, textStatus, jQxhr) {
-				$('#server-response').html('<i class="fa fa-check"></i>' + data.message);
-				$('#server-response').css('display', 'block');
-				$('#signup').css('margin-bottom', '19px');
+				$('#subscribe-message').html('<i class="fa fa-check"></i>' + data.message);
+				$('#subscribe-message').css('display', 'block');
 			},
 			error: function (jqXhr, textStatus, errorThrown) {
-				$('#server-response').html('<i class="fa fa-warning"></i>' + errorThrown.message);
-				$('#server-response').css('display', 'block');
-				$('#signup').css('margin-bottom', '19px');
+				$('#subscribe-message').html('<i class="fa fa-warning"></i>' + errorThrown.message);
+				$('#subscribe-message').css('display', 'block');
 				console.log(errorThrown.message);
 			}
 		})

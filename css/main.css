@@ -32,7 +32,7 @@ body {
 }
 
 html {
-	background: #161415 url(../images/bg.jpg) no-repeat center center fixed;
+	background: #161415 url(../images/bg.png) no-repeat center center fixed;
 	-webkit-background-size: cover !important;
 	-moz-background-size: cover !important;
 	background-size: cover !important;
@@ -471,7 +471,7 @@ input[type="checkbox"] {
 
 @media only screen and (max-width:768px) {
 	#content-wrap {
-		padding-top: 13%;
+		padding-top: 10%;
 	}
 
 }
@@ -504,7 +504,7 @@ main {
 main::after {
 	content: "";
 	display: block;
-	height: 150px;
+	height: 80px;
 }
 
 main h1 {
@@ -519,6 +519,10 @@ main p {
 	color: #fff;
 	margin-bottom: 18px;
 	padding: 0;
+}
+
+.intro-text {
+	font: 19px/34px "Raleway", sans-serif;
 }
 
 main hr {
@@ -564,6 +568,10 @@ main .site-header .logo a {
 		font: 16px/30px "montserrat-regular", sans-serif;
 	}
 
+	.intro-text {
+		font: 16px/30px "Raleway", sans-serif;
+	}
+
 	main .site-header .logo {
 		margin: 0 0 30px 0;
 	}
@@ -583,6 +591,10 @@ main .site-header .logo a {
 		font: 15px/30px "montserrat-regular", sans-serif;
 	}
 
+	.intro-text {
+		font: 15px/30px "Raleway", sans-serif;
+	}
+
 	main .site-header .logo {
 		margin: 0 0 24px 0;
 	}
@@ -590,6 +602,10 @@ main .site-header .logo a {
 	main .site-header .logo a {
 		width: 175px;
 		height: 60px;
+	}
+
+	main::after {
+		height: 38px;
 	}
 
 }
@@ -608,7 +624,7 @@ main .site-header .logo a {
 	}
 
 	main::after {
-		height: 78px;
+		height: 18px;
 	}
 
 }
@@ -853,6 +869,7 @@ main .site-header .logo a {
 /* modal toggles
 ------------------------------------------ */
 .modal-toggles {
+	margin-bottom: 20px;
 	clear: both;
 }
 
@@ -860,7 +877,7 @@ main .site-header .logo a {
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
-	font: 16px/24px "montserrat-bold", sans-serif;
+	font: 18px/24px "montserrat-bold", sans-serif;
 	letter-spacing: 1px;
 }
 
@@ -869,33 +886,17 @@ main .site-header .logo a {
 }
 
 .modal-toggles li a {
-	padding: 0 40px 0 65px;
+	padding: 10px 20px;
 	position: relative;
 	display: block;
 	line-height: 30px;
-}
-
-.modal-toggles li a::before {
-	content: '';
-	display: inline-block;
-	padding: 0;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position: absolute;
-	top: 3px;
-}
-
-.modal-toggles .about-us a::before {
-	width: 28px;
-	height: 28px;
-	line-height: 28px;
-	background-image: url("../images/users.png");
-	left: 24px;
-	background-size: contain;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-radius: 5px;
 }
 
 @media only screen and (max-width:600px) {
 	.modal-toggles {
+		margin-bottom: 0px;
 		padding: 0 25px;
 	}
 
@@ -1200,7 +1201,7 @@ main .site-header .logo a {
 .about-header .icon-wrap {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0 0 36px 0;
+	margin: 0 0 24px 0;
 	padding: 0;
 }
 
@@ -1213,10 +1214,29 @@ main .site-header .logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 70px;
-	height: 56px;
-	background: url("../images/users@2x.png") no-repeat;
 	background-size: contain;
+}
+
+.gap {
+	width: 100px;
+	height: 100px;
+	background: url("../images/modal/gap.svg") no-repeat;
+}
+
+.offer {
+	width: 90px;
+	height: 90px;
+	background: url("../images/modal/help.svg") no-repeat;
+}
+
+/* about content */
+.about-content {
+	color: white;
+}
+
+.about-content li {
+	font: 16px/30px "Raleway", sans-serif;
+	letter-spacing: 2px;
 }
 
 @media only screen and (max-width:900px) {
@@ -1226,11 +1246,6 @@ main .site-header .logo a {
 
 	.about-header h1 {
 		font: 35px/1.2em "montserrat-bold", sans-serif;
-	}
-
-	.about-header .icon-wrap i {
-		width: 61px;
-		height: 50px;
 	}
 
 }
@@ -1245,7 +1260,12 @@ main .site-header .logo a {
 	}
 
 	.about-header .icon-wrap {
-		margin: 0 0 24px 0;
+		margin: 0 0 16px 0;
+	}
+
+	.about-header .icon-wrap i {
+		width: 70px;
+		height: 70px;
 	}
 
 }
@@ -1265,6 +1285,11 @@ main .site-header .logo a {
 	.about-header h1 {
 		font: 30px/1.2em "montserrat-bold", sans-serif;
 	}
+	
+	.about-content li {
+		font: 15px/28px "Raleway", sans-serif;
+		letter-spacing: 2px;
+	}
 
 }
 
@@ -1278,27 +1303,6 @@ main .site-header .logo a {
 		height: 46px;
 	}
 
-}
-
-/* about content */
-.about-content {
-	color: white;
-}
-
-.about-content h3 {
-	font: 14px/1em "montserrat-bold", sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: #fbca08;
-}
-
-.contact p {
-	margin: 9px 0;
-}
-
-.contact h3 {
-	margin-top: 24px;
-	margin-bottom: 0;
 }
 
 /* 
@@ -1378,6 +1382,7 @@ footer a:focus {
 
 @media only screen and (max-width:768px) {
 	footer {
+		position: static;
 		padding-top: 24px;
 		text-align: center;
 	}
