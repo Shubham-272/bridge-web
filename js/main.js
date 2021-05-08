@@ -118,7 +118,7 @@
 			contentType: 'application/x-www-form-urlencoded',
 			data: $(this).serialize(),
 			success: function (data, textStatus, jQxhr) {
-				$('#subscribe-message').html('<i class="fa fa-check"></i>' + data.message);
+				$('#subscribe-message').html('<i class="fa fa-check"></i>' + `Cheers on taking the first step! You'll hear from us soon.`);
 				$('#subscribe-message').css('display', 'block');
 			},
 			error: function (jqXhr, textStatus, errorThrown) {

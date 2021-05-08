@@ -448,6 +448,12 @@ input[type="checkbox"] {
 	display: inline;
 }
 
+@media only screen and (max-width:900px) {
+	label {
+		font-size: 14px;
+	}
+}
+
 /* 
 /* 05. =content styles
 /* =================================================================== */
@@ -549,8 +555,8 @@ main .site-header .logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 200px;
-	height: 70px;
+	width: 250px;
+	height: 75px;
 	background: url("../images/logo/logo@2x.png") no-repeat;
 	background-size: contain;
 }
@@ -600,8 +606,8 @@ main .site-header .logo a {
 	}
 
 	main .site-header .logo a {
-		width: 175px;
-		height: 60px;
+		width: 180px;
+		height: 65px;
 	}
 
 	main::after {
@@ -643,8 +649,8 @@ main .site-header .logo a {
 	}
 
 	main .site-header .logo a {
-		width: 150px;
-		height: 52px;
+		width: 165px;
+		height: 55px;
 	}
 
 }
