@@ -8,8 +8,8 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Launching Soon | Project Bridge</title>
-    <meta name="description" content="Launching Soon page for Project Bridge">
+    <title>Unsubscribe | Project Bridge</title>
+    <meta name="description" content="Unsubscribe from updates for Project Bridge">
     <meta name="author" content="Shubham Pharande">
 
     <!-- Mobile Specific Metas
@@ -63,31 +63,34 @@
 
             <div id="main-content" class="twelve columns">
 
-                <h1>We are sad to see you go</h1>
+                <h1 class="hide-on-unsub">We are sad to see you go</h1>
 
-                <p class="intro-text">
-                    We hate goodbyes, but if you change your mind, we'll always be here with something interesting to
+                <p class="intro-text hide-on-unsub">
+                    If you change your mind, we'll always be here with something interesting to
                     share. Click below to unsubscribe.
                 </p>
 
-                <hr>
+                <hr class="hide-on-unsub">
 
                 <!-- Signup Form -->
                 <div id="signup">
 
                     <form id="unsub-form" class="group">
 
-                        <input type="email" value="" name="email" class="email" id="email" placeholder="Your Email ID"
+                        <input type="email" value="" name="email" class="email hide-on-unsub" id="unsub-email" placeholder="Your Email ID"
                             required>
 
-                        <input type="submit" value="Unsubscribe" name="unsubscribe" id="unsubscribe" class="button">
+                        <input type="submit" value="Unsubscribe" name="unsubscribe" id="unsubscribe" class="button hide-on-unsub">
 
-                        <label for="email" id="unsubscribe-message">
-                        </label>
+                        <label for="email" id="unsubscribe-message"></label>
 
                     </form>
 
                 </div> <!-- /Signup form -->
+
+                <p class="intro-text show-on-unsub">
+                    Feel free to stay conencted through our <a href="https://www.linkedin.com/company/bridge-knowledge-sharing-platform" aria-label="LinkedIn">LinkedIn handle</a>
+                </p>
 
             </div><!-- /main-content -->
 
@@ -121,7 +124,6 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/jquery.placeholder.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
