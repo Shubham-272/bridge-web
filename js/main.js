@@ -129,4 +129,32 @@
 		})
 	})
 
+	$("#unsub-form").submit(function (e) {
+
+		e.preventDefault();
+
+		var actionUrl = "http://localhost:8080/unsubscribe";
+
+		$('#unsubscribe-message').html('Unsubscribing...');
+
+		$.ajax({
+			url: actionUrl,
+			type: 'post',
+			contentType: 'application/x-www-form-urlencoded',
+			data: $(this).serialize(),
+			success: function (data, textStatus, jQxhr) {
+				$('#unsubscribe-message').html('<i class="fa fa-check"></i>' + `You have been successfully unsubscribed`);
+				$('#unsubscribe-message').css('display', 'block');
+				$('#unsubscribe').css('display', 'none');
+				$('#email').css('display', 'none');
+				
+			},
+			error: function (jqXhr, textStatus, errorThrown) {
+				$('#unsubscribe-message').html('<i class="fa fa-warning"></i>' + errorThrown.message);
+				$('#unsubscribe-message').css('display', 'block');
+				console.log(errorThrown.message);
+			}
+		})
+	})
+
 })(jQuery);
