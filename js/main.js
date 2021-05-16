@@ -108,7 +108,7 @@
 
 		e.preventDefault();
 
-		var actionUrl = "https://bridge-mail-list-server.herokuapp.com/addEmail";
+		var actionUrl = "https://bridge-mail-list-server.herokuapp.com/subscribe";
 
 		$('#subscribe-message').html('Subscribing...');
 
