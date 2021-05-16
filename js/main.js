@@ -109,7 +109,6 @@
 		e.preventDefault();
 
 		var actionUrl = "https://bridge-mail-list-server.herokuapp.com/subscribe";
-		// test build comment
 
 		$('#subscribe-message').html('Subscribing...');
 
@@ -123,37 +122,9 @@
 				$('#subscribe-message').css('display', 'block');
 			},
 			error: function (jqXhr, textStatus, errorThrown) {
-				$('#subscribe-message').html('<i class="fa fa-warning"></i>' + errorThrown.message);
+				$('#subscribe-message').html('<i class="fa fa-warning"></i>' + JSON.parse(jqXhr.responseText).message);
 				$('#subscribe-message').css('display', 'block');
-				console.log(errorThrown.message);
-			}
-		})
-	})
-
-	$("#unsub-form").submit(function (e) {
-
-		e.preventDefault();
-
-		var actionUrl = "https://bridge-mail-list-server.herokuapp.com/unsubscribe";
-
-		$('#unsubscribe-message').html('Unsubscribing...');
-
-		$.ajax({
-			url: actionUrl,
-			type: 'post',
-			contentType: 'application/x-www-form-urlencoded',
-			data: $(this).serialize(),
-			success: function (data, textStatus, jQxhr) {
-				$('#unsubscribe-message').html('<i class="fa fa-check"></i>' + `You won't receive any further communications from Project Bridge`);
-				$('#unsubscribe-message').css('display', 'block');
-				$('.hide-on-unsub').css('display', 'none');
-				$('.show-on-unsub').css('display', 'inherit');
-
-			},
-			error: function (jqXhr, textStatus, errorThrown) {
-				$('#unsubscribe-message').html('<i class="fa fa-warning"></i>' + errorThrown.message);
-				$('#unsubscribe-message').css('display', 'block');
-				console.log(errorThrown.message);
+				console.log(JSON.parse(jqXhr.responseText).message);
 			}
 		})
 	})
