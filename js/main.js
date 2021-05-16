@@ -109,6 +109,7 @@
 		e.preventDefault();
 
 		var actionUrl = "https://bridge-mail-list-server.herokuapp.com/subscribe";
+		// test build comment
 
 		$('#subscribe-message').html('Subscribing...');
 
