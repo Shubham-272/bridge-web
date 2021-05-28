@@ -21,6 +21,18 @@
 
 	})
 
+	/*---------------------------------------------------- */
+	/* Analytics
+	------------------------------------------------------ */
+
+	if (window.location.host === "projectbridge.app" || window.location.host === "www.projectbridge.app") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-QEHF37GQD3');
+	}
+
 	/*----------------------------------------------------*/
 	/*  Placeholder Plugin Settings
 	------------------------------------------------------ */
@@ -32,7 +44,7 @@
 	------------------------------------------------------ */
 	setTimeout(function () {
 
-		$('main h1, #mod-about h1').fitText(1.1, { minFontSize: '28px', maxFontSize: '38px' });
+		$('main h1').fitText(1.1, { minFontSize: '28px', maxFontSize: '38px' });
 
 	}, 100);
 

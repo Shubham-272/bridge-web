@@ -21,6 +21,19 @@
 
 	})
 
+	/*---------------------------------------------------- */
+	/* Analytics
+	------------------------------------------------------ */
+
+	if (window.location.host === "projectbridge.app" || window.location.host === "www.projectbridge.app") {
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-QEHF37GQD3');
+	}
+
+
 	/*----------------------------------------------------*/
 	/*  Placeholder Plugin Settings
 	------------------------------------------------------ */
@@ -34,6 +47,7 @@
 
 		var html = $('html'),
 			main = $('main, footer'),
+			topbar = $('#topbar'),
 			footer = $('footer'),
 			curMod = $(this).attr('href'),
 			modal = $(curMod),
@@ -42,7 +56,9 @@
 		main.fadeOut(500, function () {
 			$('html,body').scrollTop(0);
 			modal.addClass('is-visible');
+			topbar.css('display', 'none');
 		});
+		topbar.fadeOut(500);
 
 		e.preventDefault();
 
@@ -54,6 +70,7 @@
 				modal.removeClass('is-visible');
 				setTimeout(function () {
 					main.fadeIn(500);
+					topbar.fadeIn(500);
 				}, 500);
 
 				evt.preventDefault();
@@ -68,6 +85,7 @@
 				modal.removeClass('is-visible');
 				setTimeout(function () {
 					main.fadeIn(500);
+					topbar.fadeIn(500);
 				}, 500);
 
 				evt.preventDefault();
