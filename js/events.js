@@ -11,7 +11,7 @@
     ------------------------------------------------------ */
     $(window).on('load', async function () {
 
-        await generateEventCards();
+        await generateEventCards().promise();
 
         // will first fade out the loading animation 
         $("#loader").fadeOut("slow", function () {
@@ -48,7 +48,7 @@
     /*----------------------------------------------------*/
     /* Event Cards API
     ------------------------------------------------------ */
-    function generateEventCards() {
+    async function generateEventCards() {
         const actionUrl = 'https://bridge-mail-list-server.herokuapp.com/events';
         $.ajax({
             url: actionUrl,
@@ -82,7 +82,7 @@
 
                             if (eventData.isOpen) {
                                 var registrationsLink = document.createElement('a');
-                                registerButton = document.createElement('button');
+                                var registerButton = document.createElement('button');
                                 registerButton.className = 'reg-button';
                                 registerButton.appendChild(document.createTextNode("Register"));
                                 registrationsLink.appendChild(registerButton);
@@ -123,7 +123,6 @@
                 console.error(JSON.parse(jqXhr.responseText).message);
             }
         })
-        return;
     }
 
 })(jQuery);
