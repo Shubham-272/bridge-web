@@ -11,7 +11,7 @@
     ------------------------------------------------------ */
     $(window).on('load', async function () {
 
-        await generateEventCards().promise();
+        await generateEventCards();
 
         // will first fade out the loading animation 
         $("#loader").fadeOut("slow", function () {
@@ -112,7 +112,6 @@
                     noEventsP.appendChild(document.createTextNode('No events available!'));
                     eventsContainerDiv.appendChild(noEventsP);
                 }
-
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 const eventsContainerDiv = document.querySelector(".events-container");
